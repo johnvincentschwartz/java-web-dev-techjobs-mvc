@@ -35,8 +35,10 @@
     </form>
 
     <hr />
-
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
+    <th:block th:each="job : ${jobs}">
+        <div th:text="${job}"></div>
+    </th:block>
 
 </div>
 
