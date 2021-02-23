@@ -12,17 +12,20 @@
 
     <!-- DONE #1 - Use a loop to display job results in a table. -->
     <table class="job-listing">
+        <tr class="table-header">
+            <th>Name</th>
+            <th>Employer</th>
+            <th>Location</th>
+            <th>Position Type</th>
+            <th>Skill</th>
+        </tr>
         <th:block th:each="job : ${jobs}">
             <tr>
-                <td>
-                    <ul>
-                        <li th:text="'Name: ' + ${job.getName()}"></li>
-                        <li th:text="'Employer: ' + ${job.getEmployer()}"></li>
-                        <li th:text="'Location: ' + ${job.getLocation()}"></li>
-                        <li th:text="'Position Type: ' + ${job.getPositionType()}"></li>
-                        <li th:text="'Skill: ' + ${job.getCoreCompetency()}"></li>
-                    </ul>
-                </td>
+                <td th:text="${job.getName()}"></td>
+                <td th:text="${job.getEmployer()}"></td>
+                <td th:text="${job.getLocation()}"></td>
+                <td th:text="${job.getPositionType()}"></td>
+                <td th:text="${job.getCoreCompetency()}"></td>
             </tr>
         </th:block>
     </table>

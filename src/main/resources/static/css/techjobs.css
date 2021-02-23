@@ -14,7 +14,7 @@ td {
     vertical-align: top;
 }
 
-tr:nth-child(odd) {
+tr:nth-child(even) {
     background-color: #e4e4e4;
 }
 
@@ -34,7 +34,7 @@ table.job-listing td:first-child {
 }
 
 table.job-listing td:last-child {
-    width: 80%;
+/*    width: 80%; */
 }
 
 label {
@@ -43,4 +43,9 @@ label {
 
 .centered {
     text-align: center;
+}
+
+.table-header {
+    background: black;
+    color: white
 }
